@@ -1,0 +1,6 @@
+config.yml
+temp_generaldata.csv
+temp_strokedata.csv
+test.py
+data
+__pycache__
