@@ -1,9 +1,13 @@
 import requests
 import json
 from datetime import datetime
+import yaml
 
-BASE_URL = "http://127.0.0.1:5000"   # change if running on server
-API_KEY = "1111"                    # Replace with a valid test key
+with open("config.yml", "r") as f:
+    config = yaml.safe_load(f)
+
+BASE_URL = config["BASE_URL"]   # change if running on server
+API_KEY = config["API_KEY"]     # Replace with a valid test key
 
 
 def pretty_print(title, data):

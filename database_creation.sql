@@ -68,6 +68,17 @@ CREATE TABLE splits
   FOREIGN KEY (id) REFERENCES workouts(id)
 );
 
+
+CREATE TABLE `useige` (
+  `userID` varchar(20) NOT NULL,
+  `time_run` int NOT NULL,
+  `lastID` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `amount_of_data` int NOT NULL,
+  `date_time` date NOT NULL,
+  `timed` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
 CREATE TABLE workout (
     user_id VARCHAR(10) NOT NULL,
     id VARCHAR(10) NOT NULL,

@@ -40,7 +40,7 @@ def getData():
 
 
     # Run SQL
-    sql = f"SELECT * FROM `{table6}` WHERE `userID` = %s ORDER BY timed DESC LIMIT 10;"
+    sql = f"SELECT * FROM `{table7}` WHERE `partner_id` = %s;"
     cur.execute(sql, (key,))
     keycheck = cur.fetchall()
     if len(keycheck) == 0:
@@ -98,16 +98,15 @@ def getData():
 
 
         for row in data_workedout:
-            workout = {
-                "workout": [],
-                "strokes": []
-            }
+
             # data_publish["rowers"]["workouts"].append(row)
             work_id = row["id"]
             sql = f"SELECT * FROM `{table2}` WHERE `id` = %s and id > %s ORDER BY `id`;"
             cur.execute(sql, (work_id, last_id))
             data_workout = cur.fetchall()
-            rower["workouts"].append(data_workout)
+            workout = dict(data_workout[0])
+            workout["workout"] = []
+            workout["strokes"] = []
 
 
 

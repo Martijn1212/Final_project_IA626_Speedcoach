@@ -1,0 +1,13 @@
+db:
+  user: 'username'
+  pw: 'userPW'
+  host: 'host_URL'
+  db: 'data_base'
+poll_user: 'user'
+
+BASE_URL: "http://0.0.0.0:0000"
+API_KEY: "0000"
+
+
+#        self.conn = pymysql.connect(host='mysql.clarksonmsda.org', port=3306, user='ronkm',
+#                                    passwd='CRJYir8XvgJgyuH', db='ronkm_speedcoach', autocommit=True)
